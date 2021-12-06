@@ -10,11 +10,6 @@ const headers = {
     'Access-Control-Allow-Methods': 'GET'
 };
 
-
-const server = createServer((req, res) =>{
-    const requestURL = url.parse(req.url)
-})
-
 //ミックスで検索できるように
 
 const decodeParams = searchParams => Array 
