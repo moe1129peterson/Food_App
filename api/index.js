@@ -17,15 +17,35 @@ const server = createServer((req, res) =>{
 
 //ミックスで検索できるように
 
-const decodeParams = searchParamas => Array 
-    .from(searchParamas.keys())
+const decodeParams = searchParams => Array 
+    .from(searchParams.keys())
     .reduce((acc, key) =>
-    ({...acc, [key]: searchParamas.get(key)}. {}); 
+    ({...acc, [key]: searchParams.get(key)}), {}); 
 
 const server = createServer ((req, res) => {
     const requestURL = url.parse(req.url); 
-    const decodedParams = decodeParams = decodeParams (new URLSearchParams(requestURL.serach)); 
-    const { search, location, city = 'Orem', state = 'UT'} = decodedParams; 
+    const decodedParams = decodeParams = decodeParams (new URLSearchParams(requestURL.search)); 
+    const { term, location, state = 'UT'} = decodedParams; 
 
-    const targetURL = `${config.BASE_URL}/${state.toUpperCase()}/${config.BASE}`
+    const targetURL = `${config.BASE_URL}/${state.toUpperCase()}/${config.BASE}/app-id=${config.APP_ID}&app_key=${config.API_KEY}&what=${term}&`;
+
+    if (req.method === 'GET') {
+        console.log(chalk.green(`Proxy GET request to : ${targetURL}`));
+        axios.get(targetURL)
+            .then(response=> {
+                res.writeHead(200, headers);
+                res.end(JSON.stringify(response.data));
+            })
+            .catch(error => {
+                res.writeHead(500, headers);
+                res.end(JSON.stringify(error));
+
+            });
+    }
+
+})
+
+server.listen(3000, () => {
+    console.log(chalk.green('Server Listening'));
+    
 })

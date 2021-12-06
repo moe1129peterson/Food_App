@@ -1,0 +1,24 @@
+{
+  "name": "food_app",
+  "version": "1.0.0",
+  "description": "Food App for final",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moe1129peterson/Food_App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moe1129peterson/Food_App/issues"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chalk": "^5.0.0"
+  },
+  "homepage": "https://github.com/moe1129peterson/Food_App#readme"
+}
