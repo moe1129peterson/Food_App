@@ -1,2 +1,2 @@
-# Food_App
-Food App for final 
+# DGM3760_Final
+Final Project for DGM 3760

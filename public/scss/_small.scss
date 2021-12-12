@@ -1,0 +1,69 @@
+
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: $mainFont;
+    background-image: url("/images/mountains.jpg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+
+/*----------- HEADER --------------*/
+
+header {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+
+/*----------- NAVIGATION --------------*/
+
+
+
+/*----------- MAIN --------------*/
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+#searchBar {
+    display: flex;
+    width: 90vw;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#shortenURLbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#searchItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/*----------- FOOTER --------------*/
+/* footer {
+    grid-area: footer;
+    background-color: #020111;
+    color: #fff;
+    text-align: center;
+    padding: .5rem 2%;
+} */

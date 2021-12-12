@@ -1,24 +1,29 @@
 {
-  "name": "food_app",
+  "name": "dgm3760_final",
   "version": "1.0.0",
-  "description": "Food App for final",
+  "description": "Final Project for DGM3760",
   "main": "index.js",
   "scripts": {
-    "start": "node api/index.js"
+    "serve": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moe1129peterson/Food_App.git"
+    "url": "git+https://github.com/andrew-peterson0429/DGM3760_Final.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Andrew Peterson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/moe1129peterson/Food_App/issues"
+    "url": "https://github.com/andrew-peterson0429/DGM3760_Final/issues"
   },
+  "homepage": "https://github.com/andrew-peterson0429/DGM3760_Final#readme",
   "dependencies": {
-    "axios": "^0.24.0",
-    "chalk": "^5.0.0"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.1",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9"
   },
-  "homepage": "https://github.com/moe1129peterson/Food_App#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
