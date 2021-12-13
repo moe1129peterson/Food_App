@@ -11,6 +11,7 @@ const router = express.Router()
 // import the Url database model
 const Url = require('../models/UrlModel')
 
+// CREATE
 router.post('/shorten', async (req, res) => {
     try {
         const {
@@ -39,6 +40,7 @@ router.post('/shorten', async (req, res) => {
                     longUrl,
                     shortUrl,
                     urlCode,
+                    hitCounter: 0,
                     date: new Date()
                 })
                 await url.save()
@@ -52,6 +54,30 @@ router.post('/shorten', async (req, res) => {
     catch (err) {
         console.log(err.message)
         res.status(500).json('Server Error')
+    }
+})
+
+// DELETE
+router.delete('/:id', async (req, res) => {
+    try {
+        let { id } = req.params;
+        const deleteUrl = await Url.findByIdAndRemove(id)
+        if (!deleteUrl.error) {
+            res.status(200).json({
+                success: true, 
+                data: `${id} was successfully deleted`
+            })
+        } else {
+            res.status(400).json({
+                success: false, 
+                data: deleteUrl.error
+            })
+        }
+    } catch (error) {
+        res.status(500).json({
+            success: false, 
+            data: error.message
+        })
     }
 })
 

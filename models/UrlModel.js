@@ -5,6 +5,7 @@ const URLSchema = new mongoose.Schema({
     urlCode: String,
     longUrl: String,
     shortUrl: String,
+    hitCounter: Number,
     date: {
         type: String,
         default: Date.now

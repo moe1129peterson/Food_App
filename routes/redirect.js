@@ -7,6 +7,7 @@ const router = express.Router()
 
 const Url = require('../models/UrlModel')
 
+// READ and UPDATE
 router.get('/:code', async (req, res) => {
     try {
         // find a document match to the code in req.params.code
@@ -14,8 +15,9 @@ router.get('/:code', async (req, res) => {
             urlCode: req.params.code
         })
         if (url) {
+            let updatedUrl = await Url.findByIdAndUpdate(url._id, { hitCounter: url.hitCounter + 1 }, { new: true })
             // when valid we perform a redirect
-            return res.redirect(url.longUrl)
+            return res.redirect(updatedUrl.longUrl)
         } else {
             // else return a not found 404 status
             return res.status(404).json('No URL Found')
