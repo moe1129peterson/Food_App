@@ -5,7 +5,7 @@
 body {
     font-size: 16px;
     font-family: $mainFont;
-    background-image: url("/images/mountains.jpg");
+    background-image: url("/images/mountains560.jpg");
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
@@ -18,7 +18,19 @@ body {
 header {
     display: flex;
     justify-content: center;
+    display: flex;
+    justify-content: center;
     color: #fff;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 274px;
+    background-image: url("/images/logo250.png");
+    background-repeat: no-repeat;
+
 }
 
 
@@ -35,12 +47,20 @@ header {
     padding: 10px;
 }
 
+::placeholder {
+    color: $primaryColor;
+    padding-left: 1rem;
+    font-size: 1em;
+  }
+
 #searchBar {
     display: flex;
     width: 90vw;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-bottom: 1.5rem;
+    background-color: $menuColor;
+    border-color: $primaryColor;
 }
 
 #shortenURLbtn {
@@ -49,7 +69,10 @@ header {
     align-items: center;
     width: 30vw;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 20px;
+    color: $primaryColor;
+    background-color: $menuColor;
+    border-color: $primaryColor;
     cursor: pointer;
 }
 

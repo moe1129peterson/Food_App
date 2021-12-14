@@ -1,56 +1,35 @@
-div#pageWrapper {
-    grid-template-areas:
-    "header header"
-    "navigation content"
-    "footer footer";
-    grid-template-columns: 150px auto;
-}
 
 
 /*----------- BODY --------------*/
-
+body {
+    background-image: url("/images/mountains.jpg");
+}
 
 
 /*----------- HEADER --------------*/
 
 header {
 
-    h1 { 
-        font-size: 4rem; 
-        margin-left: 5px;
-        margin-bottom: 1rem;
-    }
+}
 
-    img {
-        padding-bottom: 1.4rem;
-    }
+#logo {
+    background-image: url("/images/logo250.png");
+    background-repeat: no-repeat;
 }
 
 /*----------- NAVIGATION --------------*/
-a.myjump {
-    display: none;
-}
-
-nav {
-    height: auto;
-}
 
 
 /*----------- MAIN --------------*/
-
-main figure.left {
-    float: left; 
-    width: 30%; 
-    margin-right: 2rem;
-    padding-bottom: .5rem;
+#searchBar {
+    width: 80vw;
+    height: 50px;
+    margin-bottom: 1.5rem;
 }
 
-main figure.right {
-    float: right; 
-    width: 30%; 
-    margin-left: 2rem;
-    padding-bottom: .5rem;
+#shortenURLbtn {
+    width: 25vw;
+    height: 50px;
 }
-
 
 /*----------- FOOTER --------------*/

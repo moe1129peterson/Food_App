@@ -2,6 +2,7 @@ const searchBar = document.getElementById('searchBar');
 const shortUrl = document.getElementById('shortUrl')
 let shortId
 
+
 const submitUrl = async () => {
     let response = await axios({
         method: 'POST', 
@@ -30,6 +31,9 @@ const deleteUrl = async () => {
         shortUrl.style.display = 'block'
     }
 }
+
+
+
 
 const deleteBtn = document.getElementById('deleteBtn')
 deleteBtn.addEventListener('click', deleteUrl)

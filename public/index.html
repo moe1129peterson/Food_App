@@ -15,13 +15,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
      
 </head>
 <body>
 
 <!-- HEADER HERE -->
 	<header>
-        <h1>URsmalL</h1>
+        <div id="logo">
+            <img src="/public/images/logo.png" alt="">
+        </div>
     </header>
 
 <!-- NAVIGATION HERE -->
@@ -36,11 +39,17 @@
         <div class="center">
             <div id="searchItems">
                 <input id="searchBar" type="text" placeholder="Type URL to shorten">
+            </div>
+            <div>
                 <button id="shortenURLbtn">Shorten URL</button>
             </div>
-
             <div>
-                <span id="shortUrl" style="display: none;"></span>
+                <button id="copybtn">COPY</button>
+            </div>
+        </div>
+            
+            <div>
+                <span class="center" id="shortUrl" style="display: none;"></span>
                 <button id="deleteBtn"></button>
             </div>
             

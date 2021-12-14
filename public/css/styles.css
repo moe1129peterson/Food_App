@@ -307,7 +307,7 @@ template {
 body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
-  background-image: url("/images/mountains.jpg");
+  background-image: url("/images/mountains560.jpg");
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
@@ -317,7 +317,17 @@ body {
 header {
   display: flex;
   justify-content: center;
+  display: flex;
+  justify-content: center;
   color: #fff; }
+
+#logo {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 274px;
+  background-image: url("/images/logo250.png");
+  background-repeat: no-repeat; }
 
 /*----------- NAVIGATION --------------*/
 /*----------- MAIN --------------*/
@@ -328,12 +338,19 @@ header {
   transform: translate(-50%, -50%);
   padding: 10px; }
 
+::placeholder {
+  color: #24e6de;
+  padding-left: 1rem;
+  font-size: 1em; }
+
 #searchBar {
   display: flex;
   width: 90vw;
   height: 50px;
-  border-radius: 10px;
-  margin-bottom: 1.5rem; }
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+  background-color: #1f3773;
+  border-color: #24e6de; }
 
 #shortenURLbtn {
   display: flex;
@@ -341,7 +358,10 @@ header {
   align-items: center;
   width: 30vw;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 20px;
+  color: #24e6de;
+  background-color: #1f3773;
+  border-color: #24e6de;
   cursor: pointer; }
 
 #searchItems {
@@ -363,58 +383,44 @@ span#shortUrl {
     padding: .5rem 2%;
 } */
 @media only screen and (min-width: 35rem) {
-  div#pageWrapper {
-    grid-template-areas: "header header" "navigation content" "footer footer";
-    grid-template-columns: 150px auto; }
-
   /*----------- BODY --------------*/
+  body {
+    background-image: url("/images/mountains.jpg"); }
+
   /*----------- HEADER --------------*/
-  header h1 {
-    font-size: 4rem;
-    margin-left: 5px;
-    margin-bottom: 1rem; }
-  header img {
-    padding-bottom: 1.4rem; }
+  #logo {
+    background-image: url("/images/logo250.png");
+    background-repeat: no-repeat; }
 
   /*----------- NAVIGATION --------------*/
-  a.myjump {
-    display: none; }
-
-  nav {
-    height: auto; }
-
   /*----------- MAIN --------------*/
-  main figure.left {
-    float: left;
-    width: 30%;
-    margin-right: 2rem;
-    padding-bottom: .5rem; }
+  #searchBar {
+    width: 80vw;
+    height: 50px;
+    margin-bottom: 1.5rem; }
 
-  main figure.right {
-    float: right;
-    width: 30%;
-    margin-left: 2rem;
-    padding-bottom: .5rem; }
+  #shortenURLbtn {
+    width: 25vw;
+    height: 50px; }
 
   /*----------- FOOTER --------------*/ }
 /* end of media query */
 @media only screen and (min-width: 64rem) {
-  div#pageWrapper {
-    grid-template-areas: "header" "navigation" "content" "footer";
-    grid-template-columns: auto;
-    margin: auto; }
-
   /*----------- BODY --------------*/
+  body {
+    background-image: url("/images/mountains.jpg"); }
+
   /*----------- HEADER --------------*/
   /*----------- NAVIGATION --------------*/
-  nav ul li {
-    flex-basis: auto; }
-    nav ul li a {
-      padding: .6rem 1rem; }
-
   /*----------- MAIN --------------*/
-  main {
-    margin: 0 15rem 0 15rem; }
+  #searchBar {
+    width: 30vw;
+    height: 40px;
+    margin-bottom: 1.5rem; }
+
+  #shortenURLbtn {
+    width: 10vw;
+    height: 40px; }
 
   /*----------- FOOTER --------------*/ }
 /* end of media query */
