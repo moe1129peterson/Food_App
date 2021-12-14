@@ -30,7 +30,6 @@ header {
     height: 274px;
     background-image: url("/images/logo250.png");
     background-repeat: no-repeat;
-
 }
 
 
@@ -39,6 +38,7 @@ header {
 
 
 /*----------- MAIN --------------*/
+
 .center {
     position: absolute;
     left: 50%;
@@ -47,11 +47,20 @@ header {
     padding: 10px;
 }
 
+.flexed {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
 ::placeholder {
     color: $primaryColor;
     padding-left: 1rem;
-    font-size: 1em;
-  }
+}
+
+input[type=text] {
+    color: $primaryColor;
+}
 
 #searchBar {
     display: flex;
@@ -68,12 +77,17 @@ header {
     justify-content: center;
     align-items: center;
     width: 30vw;
-    height: 50px;
-    border-radius: 20px;
+    height: 60px;
+    border-radius: 30px;
+    color: $menuColor;
+    background-color: $primaryColor;
+    border-color: none;
+    cursor: pointer;
+}
+
+#shortenURLbtn:hover {
     color: $primaryColor;
     background-color: $menuColor;
-    border-color: $primaryColor;
-    cursor: pointer;
 }
 
 #searchItems {
@@ -83,17 +97,22 @@ header {
     margin-bottom: 2rem;
 }
 
-span#shortUrl {
-    color: #fff;
-    text-align: center;
+div#shortUrl {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    color: $primaryColor;
+    // text-align: center;
+    background-color: $menuColor;
+    width: 90vw;
+    height: auto;
 }
 
+#deleteBtn {
+    display: flex;
+    color: $primaryColor;
+    background-color:transparent;
+    // border: none;
+}
 
 /*----------- FOOTER --------------*/
-/* footer {
-    grid-area: footer;
-    background-color: #020111;
-    color: #fff;
-    text-align: center;
-    padding: .5rem 2%;
-} */

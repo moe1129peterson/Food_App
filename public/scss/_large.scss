@@ -16,13 +16,22 @@ body {
 /*----------- MAIN --------------*/
 #searchBar {
         width: 30vw;
-        height: 40px;
+        height: 50px;
         margin-bottom: 1.5rem;
 }
 
 #shortenURLbtn {
         width: 10vw;
-        height: 40px;
-    }
+        height: 55px;
+}
+
+#searchBar {
+       margin-right: 1rem;
+}
+
+div#shortUrl {
+        width: 40vw;
+        height: auto;
+}
 
 /*----------- FOOTER --------------*/

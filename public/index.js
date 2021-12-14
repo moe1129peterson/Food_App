@@ -14,12 +14,14 @@ const submitUrl = async () => {
     if (response.status === 200) {
         shortUrl.innerHTML = response.data.shortUrl
         shortUrl.style.display = 'block'
+        deleteBtn.style.display = 'block'
         shortId = response.data._id
     }
 }
 
 const subBtn = document.getElementById('shortenURLbtn')
 subBtn.addEventListener('click', submitUrl)
+
 
 const deleteUrl = async () => {
     let response = await axios({
@@ -31,7 +33,6 @@ const deleteUrl = async () => {
         shortUrl.style.display = 'block'
     }
 }
-
 
 
 

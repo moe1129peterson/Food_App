@@ -39,21 +39,25 @@
         <div class="center">
             <div id="searchItems">
                 <input id="searchBar" type="text" placeholder="Type URL to shorten">
-            </div>
-            <div>
                 <button id="shortenURLbtn">Shorten URL</button>
-            </div>
-            <div>
-                <button id="copybtn">COPY</button>
+                
+                <div class="flexed">
+                    
+                    <div id="shortUrl" style="display: none;"></div>
+                    
+                    <div>
+                        <button id="deleteBtn" style="display: none;">X</button>
+                    </div>
+                    
+                </div>
+            
             </div>
         </div>
             
-            <div>
-                <span class="center" id="shortUrl" style="display: none;"></span>
-                <button id="deleteBtn"></button>
-            </div>
-            
-        </div>
+        <!-- <div class="flexed">
+            <span class="center" id="shortUrl" style="display: none;"></span>
+            <button id="deleteBtn">X</button>
+        </div> -->
        
     </main>
 
