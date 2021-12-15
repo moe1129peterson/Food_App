@@ -309,9 +309,13 @@ body {
   font-family: "Roboto", sans-serif;
   background-image: url("/images/mountains560.jpg");
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-  background-size: 100% 100%; }
+  /*   width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%; */ }
+
+.responsive {
+  width: 100%;
+  height: auto; }
 
 /*----------- HEADER --------------*/
 header {
@@ -324,9 +328,9 @@ header {
 #logo {
   display: flex;
   justify-content: center;
-  width: 250px;
-  height: 274px;
-  background-image: url("/images/logo250.png");
+  width: 125px;
+  height: 137px;
+  background-image: url("/images/logo125.png");
   background-repeat: no-repeat; }
 
 /*----------- NAVIGATION --------------*/
@@ -404,7 +408,9 @@ div#shortUrl {
   /*----------- HEADER --------------*/
   #logo {
     background-image: url("/images/logo250.png");
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 274px; }
 
   /*----------- NAVIGATION --------------*/
   /*----------- MAIN --------------*/
