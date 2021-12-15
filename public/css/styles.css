@@ -389,21 +389,41 @@ div#shortUrl {
   display: flex;
   justify-content: space-between;
   align-content: space-around;
+  align-items: center;
+  color: #24e6de;
+  padding-left: 1rem;
+  background-color: #182a57;
+  width: 70vw;
+  height: auto; }
+
+#copyBtn {
   color: #24e6de;
   background-color: #182a57;
-  width: 90vw;
-  height: auto; }
+  border-color: #24e6de;
+  cursor: pointer; }
+
+#copyBtn:hover {
+  color: #182a57;
+  background-color: #24e6de;
+  border-color: none; }
 
 #deleteBtn {
   display: flex;
   color: #24e6de;
-  background-color: transparent; }
+  background-color: #182a57;
+  border-color: #24e6de;
+  cursor: pointer; }
+
+#deleteBtn:hover {
+  color: #24e6de;
+  background-color: #182a57;
+  border-color: none; }
 
 /*----------- FOOTER --------------*/
 @media only screen and (min-width: 35rem) {
   /*----------- BODY --------------*/
   body {
-    background-image: url("/images/mountains.jpg"); }
+    background-image: url("/images/mountains1024.jpg"); }
 
   /*----------- HEADER --------------*/
   #logo {
