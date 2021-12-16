@@ -42,6 +42,7 @@ const deleteUrl = async () => {
         shortUrl.style.display = 'none'
         deleteBtn.style.display = 'none'
         copyButton.style.display = 'none'
+        document.getElementById('searchBar').value = ''
     }
 }
 
